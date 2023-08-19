@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PETA KONSEP GEOGRAFI</title>
+<style>
+  body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+  }
+  
+  #container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  button {
+    text-transform: uppercase;
+    background-color: #f2f2f2;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #footer {
+    text-align: right;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+  <h1 style="text-align: center; text-transform: uppercase;">PETA KONSEP GEOGRAFI</h1>
+  
+  <div id="container">
+    <button class="content-button" data-target="lokasi">LOKASI</button>
+    <button class="content-button" data-target="wilayah">WILAYAH</button>
+    <button class="content-button" data-target="persebaran">PERSEBARAN</button>
+    <button class="content-button" data-target="interaksi">HUMAN-ENVIRONMENT INTERACTION</button>
+    <button class="content-button" data-target="gerakan">GERAKAN DAN MOBILITAS</button>
+    <button class="content-button" data-target="lingkungan">LINGKUNGAN FISIK</button>
+    <button class="content-button" data-target="peta">PETA DAN REPRESENTASI</button>
+    <button class="content-button" data-target="spasial">LOKASI DAN SPASIAL</button>
+    <button class="content-button" data-target="budaya">KERAGAMAN BUDAYA</button>
+    <button class="content-button" data-target="sumberdaya">PENGGUNAAN SUMBER DAYA</button>
+  </div>
+  
+  <div id="lokasi" class="hidden">
+    <h2>Lokasi</h2>
+    <p> Ini mencakup pemahaman tentang di mana suatu tempat berada. Lokasi dapat dinyatakan dalam koordinat geografis (garis lintang dan garis bujur) atau dalam konteks tempat lain yang lebih familiar</p>
+  </div>
+  
+  <div id="wilayah" class="hidden">
+    <h2>Wilayah</h2>
+    <p> Wilayah adalah area yang memiliki karakteristik fisik, budaya, ekonomi, atau politik yang sama atau serupa. Wilayah bisa berupa lokal, regional, atau global</p>
+  </div>
+  
+  <div id="persebaran" class="hidden">
+    <h2>Persebaran</h2>
+    <p>Konsep ini berkaitan dengan cara elemen-elemen tertentu, seperti populasi, sumber daya, atau fenomena fisik, terdistribusi di permukaan Bumi. Pola distribusi bisa berupa konsentrasi, dispersi, atau campuran dari keduanya</p>
+  </div>
+  
+  <div id="interaksi" class="hidden">
+    <h2>Human-Environment Interaction</h2>
+    <p>Konsep ini mencakup bagaimana manusia mempengaruhi lingkungan dan sebaliknya. Hal ini juga melibatkan studi tentang bagaimana manusia beradaptasi dengan lingkungan mereka.</p>
+  </div>
+  
+  <div id="gerakan" class="hidden">
+    <h2>Gerakan dan Mobilitas</h2>
+    <p>Ini melibatkan pemahaman tentang bagaimana manusia, hewan, barang, informasi, dan ide bergerak dari satu tempat ke tempat lain. Faktor seperti transportasi, migrasi, dan perdagangan termasuk dalam konsep ini.</p>
+  </div>
+  
+  <div id="lingkungan" class="hidden">
+    <h2>Lingkungan Fisik</h2>
+    <p> Ini meliputi fitur fisik Bumi seperti relief, iklim, vegetasi, dan hidrologi. Lingkungan fisik memainkan peran penting dalam membentuk bentuk permukiman dan kehidupan manusia.</p>
+  </div>
+  
+  <div id="peta" class="hidden">
+    <h2>Peta dan Representasi</h2>
+    <p>Peta adalah representasi visual dari permukaan Bumi. Konsep ini melibatkan pemahaman tentang bagaimana peta diciptakan, bagaimana mereka menggambarkan informasi geografis, dan bagaimana membaca peta</p>
+  </div>
+  
+  <div id="spasial" class="hidden">
+    <h2>Lokasi dan Spasial</h2>
+    <p>Ini adalah hubungan antara berbagai entitas geografis dalam ruang. Misalnya, bagaimana dua kota berhubungan dalam hal jarak, arah, atau ketergantungan ekonomi.</p>
+  </div>
+  
+  <div id="budaya" class="hidden">
+    <h2>Keragaman Budaya</h2>
+    <p>Ini berkaitan dengan perbedaan dalam bahasa, agama, adat istiadat, dan aspek budaya lainnya yang berbeda antara kelompok manusia di berbagai wilayah.</p>
+  </div>
+  
+  <div id="sumberdaya" class="hidden">
+    <h2>Penggunaan Sumber Daya</h2>
+    <p>Konsep ini melibatkan bagaimana manusia memanfaatkan sumber daya alam, seperti air, tanah, mineral, dan energi, serta dampaknya terhadap lingkungan.</p>
+  </div>
+
+  <div id="footer">
+    <p>Deky Pradana Grida Jombang</p>
+  </div>
+
+<script>
+  const buttons = document.querySelectorAll('.content-button');
+  const contents = document.querySelectorAll('.hidden');
+  
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const targetId = button.getAttribute('data-target');
+      contents.forEach(content => {
+        content.style.display = 'none';
+      });
+      document.getElementById(targetId).style.display = 'block';
+    });
+  });
+</script>
+</body>
+</html>
+
